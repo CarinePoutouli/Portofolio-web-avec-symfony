@@ -1,0 +1,18 @@
+{{ form_start(form) }}
+    {# {{ form_widget(form) }} #}
+    <div class="mb-3">
+
+        <label for="nom" class="form-label">nom</label>
+        {{ form_widget(form.nom) }}
+
+      </div>
+      <div class="mb-3">
+
+        <label for="commentaire" class="form-label">Commentaire</label>
+        {{ form_widget(form.commentaire) }}
+
+      </div>
+
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+
