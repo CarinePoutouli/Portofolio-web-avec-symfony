@@ -6,25 +6,29 @@
 {#    {{ form_widget(form.Blog) }}#}
 {#    <button class="btn">{{ button_label|default('Save') }}</button>#}
 <div class="form-floating mb-3">
+    {{ form_widget(form.nom,{'attr': {'class': 'form-control',"placeholder":"nom"}}) }}
+    <label for="name">Nom</label>
+    {#
     <input name="nom" class="form-control" id="phone" type="text" placeholder="(123) 456-7890" data-sb-validations="required" />
     <label for="phone">Nom</label>
+    #}
+
     <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
 </div>
 <div class="form-floating mb-3">
-    <input name="prenom" class="form-control" id="phone" type="text" placeholder="(123) 456-7890" data-sb-validations="required" />
-    <label for="phone">Prenom</label>
+
+    {{ form_widget(form.prenom,{'attr': {'class': 'form-control'}}) }}
+
     <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
 </div>
 <div class="form-floating mb-3">
-    <input name="age" class="form-control" id="phone" type="number" placeholder="(123) 456-7890" data-sb-validations="required" />
-    <label for="phone">Age</label>
+    {{ form_widget(form.age,{'attr': {'class': 'form-control'}}) }}
     <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
 </div>
 
 <div class="form-floating mb-3">
-    {{ form_widget(form.Blog) }}
-    <label for="phone">Blog</label>
-    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+    {{ form_widget(form.Blog,{'attr': {'class': 'form-control'}}) }}
+
 </div>
 
 <button class="btn">{{ button_label|default('Save') }}</button>
